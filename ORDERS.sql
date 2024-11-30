@@ -1,10 +1,10 @@
 create table dmitriy.ORDERS(
-                               id int primary key,
-                               date timestamp,
+                               id SERIAL primary key,
+                               date DATE,
                                customer_id int not null ,
                                product_name varchar(255) not null ,
-                               amount integer not null,
-                               FOREIGN KEY (customer_id) REFERENCES dmitriy.CUSTOMERS(id)
+                               amount int not null,
+                               FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(id)
 );
 
 insert into dmitriy.ORDERS(id, date, customer_id, product_name, amount)
