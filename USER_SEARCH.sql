@@ -1,4 +1,5 @@
 SELECT product_name
-FROM ORDERS
-JOIN CUSTOMERS ON ORDERS.customer_id = CUSTOMERS.id
-WHERE LOWER(CUSTOMERS.name) = 'Alexey'; 
+FROM dmitriy.CUSTOMERS
+ JOIN dmitriy.ORDERS ON dmitriy.CUSTOMERS.id =
+                    dmitriy.ORDERS.customer_id
+WHERE LOWER(dmitriy.CUSTOMERS.name) = LOWER('Alexey');
