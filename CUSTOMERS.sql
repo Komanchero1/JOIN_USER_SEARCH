@@ -1,7 +1,7 @@
 CREATE SCHEMA dmitriy;
 
 create table dmitriy.CUSTOMERS(
-                                  id int primary key,
+                                  id SERIAL primary key,
                                   name varchar(255) not null,
                                   surname varchar(225) not null,
                                   age int not null ,
